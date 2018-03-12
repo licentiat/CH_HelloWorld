@@ -4,13 +4,13 @@ using System;
 
 namespace Nh.HelloWorld
 {
-    public class CroweApp
+    public class ChTestApp
     {
         private readonly ITestService _testService;
-        private readonly ILogger<CroweApp> _logger;
-        private readonly CroweAppSettings _config;
+        private readonly ILogger<ChTestApp> _logger;
+        private readonly ChAppSettings _config;
 
-        public CroweApp(ITestService testService, IOptions<CroweAppSettings> config, ILogger<CroweApp> logger)
+        public ChTestApp(ITestService testService, IOptions<ChAppSettings> config, ILogger<ChTestApp> logger)
         {
             _testService = testService;
             _logger = logger;
@@ -25,7 +25,7 @@ namespace Nh.HelloWorld
         }
     }
 
-    public class CroweAppSettings
+    public class ChAppSettings
     {
         public string Subject { get; set; }
     }

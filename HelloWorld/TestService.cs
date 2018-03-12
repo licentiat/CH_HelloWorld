@@ -11,9 +11,9 @@ namespace Nh.HelloWorld
     class TestService : ITestService
     {
         private readonly ILogger<TestService> _logger;
-        private readonly CroweAppSettings _config;
+        private readonly ChAppSettings _config;
 
-        public TestService(ILogger<TestService> logger, IOptions<CroweAppSettings> config)
+        public TestService(ILogger<TestService> logger, IOptions<ChAppSettings> config)
         {
             _logger = logger;
             _config = config.Value;

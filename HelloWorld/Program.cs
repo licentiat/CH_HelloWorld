@@ -20,7 +20,7 @@ namespace Nh.HelloWorld
             var serviceCollection = new ServiceCollection();
             ConfigureServices(serviceCollection);
             var serviceProvider = serviceCollection.BuildServiceProvider();
-            serviceProvider.GetService<CroweApp>().Run();
+            serviceProvider.GetService<ChTestApp>().Run();
         }
 
         private static void ConfigureServices(IServiceCollection serviceCollection)
@@ -37,10 +37,10 @@ namespace Nh.HelloWorld
             serviceCollection.AddSingleton(configuration);
 
             serviceCollection.AddOptions();
-            serviceCollection.Configure<CroweAppSettings>(configuration.GetSection("Configuration"));
+            serviceCollection.Configure<ChAppSettings>(configuration.GetSection("Configuration"));
 
             serviceCollection.AddTransient<ITestService, TestService>();
-            serviceCollection.AddTransient<CroweApp>();
+            serviceCollection.AddTransient<ChTestApp>();
         }
 
         private static IConfigurationRoot GetConfiguration()
